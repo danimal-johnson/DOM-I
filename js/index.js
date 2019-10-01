@@ -90,12 +90,12 @@ let navBar = document.querySelector("nav");
 let navItem = document.querySelectorAll("nav a");
 
 var node1 = document.createElement("a");
-var textnode1 = document.createTextNode(siteContent["nav"]["nav-item-7"]);
+// var textnode1 = document.createTextNode(siteContent["nav"]["nav-item-7"]);
 node1.setAttribute("href", "#");
 navBar.appendChild(node1);
 
 var node2 = document.createElement("a");
-var textnode2 = document.createTextNode(siteContent["nav"]["nav-item-8"]);
+// var textnode2 = document.createTextNode(siteContent["nav"]["nav-item-8"]);
 node2.setAttribute("href", "#");
 navBar.appendChild(node2);
 
