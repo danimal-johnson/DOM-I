@@ -52,79 +52,81 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 
+// ------------- Top Section -----------------
 const headerImage = document.querySelector("h1");
 headerImage.textContent = "DOM Is Awesome"
 
+const buttonText = document.querySelector(".cta-text button");
+buttonText.textContent = siteContent.cta.button;
+
+// ------------- Main Content ----------------
+// -- Upper --
+let upperH4 = document.querySelectorAll(".main-content .top-content .text-content h4");
+let upperP = document.querySelectorAll(".main-content .top-content p");
+
+upperH4[0].textContent = siteContent["main-content"]["features-h4"];
+upperP[0].textContent = siteContent["main-content"]["features-content"];
+
+upperH4[1].textContent = siteContent["main-content"]["about-h4"];
+upperP[1].textContent = siteContent["main-content"]["about-content"];
+
+// -- Lower --
+let lowerH4 = document.querySelectorAll(".main-content .bottom-content .text-content h4");
+let lowerP = document.querySelectorAll(".main-content .bottom-content p");
+
+lowerH4[0].textContent = siteContent["main-content"]["services-h4"];
+lowerP[0].textContent = siteContent["main-content"]["services-content"];
+
+lowerH4[1].textContent = siteContent["main-content"]["product-h4"];
+lowerP[1].textContent = siteContent["main-content"]["product-content"];
+
+lowerH4[2].textContent = siteContent["main-content"]["vision-h4"];
+lowerP[2].textContent = siteContent["main-content"]["vision-content"];
+
 
 // ------------ Navigation -----------------
-// let nav1 = document.getElementsByTagName()
-// let myH1 = document.getElementsByTagName("h1");
-// myH1.innerHTML = "This is an H1 tag";
 
-// This works //
 let navBar = document.querySelector("nav");
-// navBar.setAttribute("style", "color: green;");
-// let joe = document.getElementsByClassName("nav").style.color = "hotpink";
-// navBar.style.color = "hotpink";
-// let newTextNode = document.createTextNode("One");
-// navBar.appendChild("newTextNode");
-// newTextNode = document.createTextNode("One");
-
-
-
-// let navAnchors = navBar.getElementsByTagName("a");
-// console.log(navAnchors);
-
-let navItem = document.querySelectorAll("a");
+let navItem = document.querySelectorAll("nav a");
 
 var node1 = document.createElement("a");
-var textnode1 = document.createTextNode(siteContent["nav"]["nav-item-7"]);
-node1.appendChild(textnode1);
+// var textnode1 = document.createTextNode(siteContent["nav"]["nav-item-7"]);
+node1.setAttribute("href", "#");
 navBar.appendChild(node1);
 
 var node2 = document.createElement("a");
-var textnode2 = document.createTextNode(siteContent["nav"]["nav-item-8"]);
-node2.appendChild(textnode2);
+// var textnode2 = document.createTextNode(siteContent["nav"]["nav-item-8"]);
+node2.setAttribute("href", "#");
 navBar.appendChild(node2);
 
-navItem = document.querySelectorAll("a"); // Make the list longer now
+navItem = document.querySelectorAll("nav a"); // Make the list longer now
 
 for (let i=0; i < navItem.length; i++) {
   navItem[i].style.color = "green";
 }
 
-console.log(navItem);
-
-
-
-
-navItem[5].style.color = "green"; // FG color doesn't work
+// Do this programmatically if possible. .foreach?
 navItem[0].textContent = siteContent["nav"]["nav-item-1"]; // Put on each element
 navItem[1].textContent = siteContent["nav"]["nav-item-2"];
 navItem[2].textContent = siteContent["nav"]["nav-item-3"];
 navItem[3].textContent = siteContent["nav"]["nav-item-4"];
 navItem[4].textContent = siteContent["nav"]["nav-item-5"];
 navItem[5].textContent = siteContent["nav"]["nav-item-6"];
-// navItem[6].textContent = siteContent["nav"]["nav-item-7"];
-// navItem[7].textContent = siteContent["nav"]["nav-item-8"];
+navItem[6].textContent = siteContent["nav"]["nav-item-7"];
+navItem[7].textContent = siteContent["nav"]["nav-item-8"];
 
-// navItem.forEach((item, index)) => (item.textContent = Object.values[siteContent.nav[index]];
+// navItem.forEach((item, index)) => (item.textContent = siteContent.values[siteContent.nav[index]];
 console.log(navItem);
- 
 
 
+// --------------- Contact ----------------
+let contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent.contact["contact-h4"];
+let contactItems = document.querySelectorAll(".contact p");
+contactItems[0].textContent = siteContent.contact.address;
+contactItems[1].textContent = siteContent.contact.phone;
+contactItems[2].textContent = siteContent.contact.email;
 
-
-
-
-// mySelection.appendChild("newTextNode");
-
-
-
-// document.getElementById("title").innerHTML = "W3Schools";
-// document.getElementById("title").href = "https://www.w3schools.com";
-// document.getElementById("m").target = "_blank";
-
-
-// let myContactInfo = document.getElementById("contact");
-// let myh4 = myContactInfo.getElementByTagName(h4).innerHTML = "I can't believe this isn't working";
+// ----------- Footer ---------------
+let footerText = document.querySelector("footer p");
+footerText.textContent = siteContent.footer.copyright = "Copyright Great Idea! 2018";
